@@ -40,3 +40,21 @@ event SampleEvent {
   o String oldValue
   o String newValue
 }
+
+asset Account identified by accountId {
+  o String accountId
+  --> Customer owner
+  o Double balance
+}
+
+participant Customer identified by customerId {
+  o String customerId
+  o String firstName
+  o String lastName
+}
+
+transaction AccountTrasnfer {
+  --> Account from
+  --> Account to
+  o Double amount
+}

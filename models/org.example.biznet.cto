@@ -53,7 +53,7 @@ participant Customer identified by customerId {
   o String lastName
 }
 
-transaction AccountTrasnfer {
+transaction AccountTransfer {
   --> Account from
   --> Account to
   o Double amount
